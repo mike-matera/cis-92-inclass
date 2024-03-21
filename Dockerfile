@@ -1,5 +1,4 @@
 # Start with the base Python container
-# FIXME: Update the version
 FROM docker.io/python:3.10.12
 
 # Install packages that are required. 
@@ -10,6 +9,13 @@ COPY mysite /mysite
 
 # Set environment variables 
 ENV PORT=8000 
+ENV STUDENT_NAME="Mike"
+ENV SITE_NAME="Mike's Site"
+ENV SECRET_KEY="blah-blah-blah"
+ENV DEBUG="1"
+ENV DATA_DIR=/
+
+RUN mkdir ${DATA_DIR}
 
 # Set the working directory
 WORKDIR /mysite 
