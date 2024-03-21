@@ -13,7 +13,7 @@ ENV STUDENT_NAME="Mike"
 ENV SITE_NAME="Mike's Site"
 ENV SECRET_KEY="blah-blah-blah"
 ENV DEBUG="1"
-ENV DATA_DIR=/
+ENV DATA_DIR="/data"
 
 RUN mkdir ${DATA_DIR}
 
